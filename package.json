@@ -1,0 +1,22 @@
+{
+  "name": "media-horde",
+  "version": "0.0.1",
+  "description": "Organize anything",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmkeezer/media-horde.git"
+  },
+  "author": "rmkeezer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rmkeezer/media-horde/issues"
+  },
+  "homepage": "https://github.com/rmkeezer/media-horde#readme",
+  "dependencies": {
+    "typescript": "^2.0.7"
+  }
+}
