@@ -1,39 +1,22 @@
 {
-  "name": "media-horde",
-  "version": "0.0.1",
-  "description": "Organize anything",
-  "main": "./src/index.js",
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
   "scripts": {
-    "build": "webpack",
-    "start": "http-server -o index.html",
-    "clean": "rm -r dist/*",
-    "wclean": "del dist\\*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rmkeezer/media-horde.git"
-  },
-  "author": "rmkeezer",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rmkeezer/media-horde/issues"
-  },
-  "homepage": "https://github.com/rmkeezer/media-horde#readme",
-  "dependencies": {
-    "@types/react": "^0.14.44",
-    "@types/react-dom": "^0.14.18",
-    "@types/react-bootstrap": "^0.0.35",
-    "http-server": "^0.9.0",
-    "react": "^15.3.2",
-    "react-bootstrap": "^0.30.6",
-    "react-dom": "^15.3.2",
-    "typed-css-modules": "^0.1.13",
-    "typescript": "^2.0.7",
-    "webpack": "^1.13.3"
-  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
   "devDependencies": {
-    "source-map-loader": "^0.1.5",
-    "ts-loader": "^1.0.0"
+    "electron": "^1.4.1"
   }
 }
