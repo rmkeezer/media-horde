@@ -1,4 +1,12 @@
+var webpack = require('webpack');
+
 module.exports = {
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ],
     entry: ["bootstrap-loader", "./src/index.tsx"],
     output: {
         filename: "./dist/bundle.js",
@@ -9,14 +17,17 @@ module.exports = {
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+        moduleDirectories: [
+            'node_modules'
+        ]
     },
 
     module: {
         loaders: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
             { test: /\.tsx?$/, loader: "ts-loader" },
-            { test: /\.css$/, loaders: ['style', 'css', 'postcss'] },
+            { test: /\.css$/, loaders: ['style', 'css'] },
             { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass'] },
             {
                 test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

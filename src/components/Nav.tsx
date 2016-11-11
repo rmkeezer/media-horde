@@ -9,62 +9,82 @@ export class Nav extends React.Component<NavProps, {}> {
     render() {
         return (
             <div id="wrapper">
-                <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <nav className="navbar navbar-default navbar-static-top" role="navigation">
                     <div className="navbar-header">
-                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span className="sr-only">Toggle navigation</span>
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="index.html">Active Learning</a>
+                        <a className="navbar-brand" href="index.html">SB Admin v2.0</a>
                     </div>
-                    <ul className="nav navbar-right top-nav">
+                    <ul className="nav navbar-top-links navbar-right">
                         <li className="dropdown">
-                            <a href="#" className="dropdown-toggle" data-toggle="dropdown"><i className="fa fa-bell"></i> <b className="caret"></b></a>
-                            <ul className="dropdown-menu alert-dropdown">
-                                <li>
-                                    <a href="questions.html">Recently Added <span className="label label-primary">Questions</span></a>
+                            <a className="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i className="fa fa-user fa-fw"></i> <i className="fa fa-caret-down"></i>
+                            </a>
+                            <ul className="dropdown-menu dropdown-user">
+                                <li><a href="#"><i className="fa fa-user fa-fw"></i> User Profile</a>
                                 </li>
-                            </ul>
-                        </li>
-                        <li className="dropdown">
-                            <a href="#" className="dropdown-toggle" data-toggle="dropdown"><i className="fa fa-user"></i> Username <b className="caret"></b></a>
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <a href="#"><i className="fa fa-fw fa-user"></i> Profile</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i className="fa fa-fw fa-envelope"></i> Inbox</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i className="fa fa-fw fa-gear"></i> Settings</a>
+                                <li><a href="#"><i className="fa fa-gear fa-fw"></i> Settings</a>
                                 </li>
                                 <li className="divider"></li>
-                                <li>
-                                    <a href="login-student.html"><i className="fa fa-fw fa-power-off"></i> Log Out</a>
+                                <li><a href="login.html"><i className="fa fa-sign-out fa-fw"></i> Logout</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                    <div className="collapse navbar-collapse navbar-ex1-collapse">
-                        <ul className="nav navbar-nav side-nav">
-                            <li  className="active">
-                                <a href="index.html"><i className="fa fa-fw fa-home"></i> Course Home</a>
-                            </li>
-                            <li>
-                                <a href="questions.html"><i className="fa fa-fw fa-question-circle"></i> Questions</a>
-                            </li>
-                            <li>
-                                <a href="statistics.html"><i className="fa fa-fw fa-bar-chart-o"></i> Statistics</a>
-                            </li>
-                            <li>
-                                <a href="roster.html"><i className="fa fa-fw fa-desktop"></i> Roster</a>
-                            </li>
-                        </ul>
+                    <div className="navbar-default sidebar" role="navigation">
+                        <div className="sidebar-nav navbar-collapse">
+                            <ul className="nav" id="side-menu">
+                                <li className="sidebar-search">
+                                    <div className="input-group custom-search-form">
+                                        <input type="text" className="form-control" placeholder="Search..."/>
+                                        <span className="input-group-btn">
+                                            <button className="btn btn-default" type="button">
+                                                <i className="fa fa-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="index.html"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i className="fa fa-bar-chart-o fa-fw"></i> Charts<span className="fa arrow"></span></a>
+                                    <ul className="nav nav-second-level">
+                                        <li>
+                                            <a href="flot.html">Flot Charts</a>
+                                        </li>
+                                        <li>
+                                            <a href="morris.html">Morris.js Charts</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li className="active">
+                                    <a href="#"><i className="fa fa-files-o fa-fw"></i> Sample Pages<span className="fa arrow"></span></a>
+                                    <ul className="nav nav-second-level">
+                                        <li>
+                                            <a className="active" href="blank.html">Blank Page</a>
+                                        </li>
+                                        <li>
+                                            <a href="login.html">Login Page</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
                 <div id="page-wrapper">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <h1 className="page-header">Blank</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
