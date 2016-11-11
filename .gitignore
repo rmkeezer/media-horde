@@ -144,3 +144,10 @@ jspm_packages
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+
+### Extras ###
+*.woff
+*.woff2
+*.eot
+*.ttf
+*.svg

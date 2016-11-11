@@ -25,17 +25,32 @@
     "@types/react": "^0.14.44",
     "@types/react-bootstrap": "^0.0.35",
     "@types/react-dom": "^0.14.18",
+    "bootstrap": "^3.3.7",
+    "bootstrap-loader": "^1.3.0",
+    "bootstrap-sass": "^3.3.7",
     "electron": "^1.4.6",
     "http-server": "^0.9.0",
+    "imports-loader": "^0.6.5",
+    "jquery": "^3.1.1",
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.6",
     "react-dom": "^15.3.2",
+    "startbootstrap-sb-admin-2": "^1.0.7",
     "typed-css-modules": "^0.1.13",
     "typescript": "^2.0.7",
     "webpack": "^1.13.3"
   },
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.11.2",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
     "source-map-loader": "^0.1.5",
-    "ts-loader": "^1.0.0"
+    "style-loader": "^0.13.1",
+    "ts-loader": "^1.0.0",
+    "url-loader": "^0.5.7"
   }
 }

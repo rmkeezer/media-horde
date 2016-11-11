@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./src/index.tsx",
+    entry: ["bootstrap-loader", "./src/index.tsx"],
     output: {
         filename: "./dist/bundle.js",
     },
@@ -15,7 +15,18 @@ module.exports = {
     module: {
         loaders: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-            { test: /\.tsx?$/, loader: "ts-loader" }
+            { test: /\.tsx?$/, loader: "ts-loader" },
+            { test: /\.css$/, loaders: ['style', 'css', 'postcss'] },
+            { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass'] },
+            {
+                test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url?limit=10000',
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+                loader: 'file',
+            },
+            { test: /bootstrap-sass(\\|\/)assets(\\|\/)javascripts(\\|\/)/, loader: 'imports?jQuery=jquery' }
         ],
 
         preLoaders: [
