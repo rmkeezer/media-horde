@@ -31,13 +31,13 @@ module.exports = {
             { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass'] },
             {
                 test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'url?limit=10000',
+                loader: 'url-loader?limit=10000&name=dist/fonts/[name].[ext]',
             },
             {
                 test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-                loader: 'file',
+                loader: 'file-loader?name=dist/fonts/[name].[ext]',
             },
-            { test: /bootstrap-sass(\\|\/)assets(\\|\/)javascripts(\\|\/)/, loader: 'imports?jQuery=jquery' }
+            { test: /bootstrap-sass(\\|\/)assets(\\|\/)javascripts(\\|\/)/, loader: 'imports-loader?jQuery=jquery' }
         ],
 
         preLoaders: [
