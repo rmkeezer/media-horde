@@ -37,6 +37,13 @@ module.exports = {
                 test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
                 loader: 'file-loader?name=dist/fonts/[name].[ext]',
             },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: [
+                    'file?hash=sha512&digest=hex&name=dist/img/[name].[ext]',
+                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                ]
+            },
             { test: /bootstrap-sass(\\|\/)assets(\\|\/)javascripts(\\|\/)/, loader: 'imports-loader?jQuery=jquery' }
         ],
 
